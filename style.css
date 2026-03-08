@@ -1,0 +1,194 @@
+/* =========================================
+   1. APP BACKGROUND & FORCED LIGHT THEME
+   ========================================= */
+.stApp, [data-testid="stAppViewContainer"], .main {
+    background-color: #F4F6F9 !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* Make the Deploy and 3-dots in top right visible */
+[data-testid="stToolbar"] *, [data-testid="stHeader"] * {
+    color: #6C5CE7 !important;
+}
+
+/* Force standard text to dark gray so it's readable on light background */
+.stMarkdown p, .stMarkdown li, .stMarkdown span {
+    color: #4B5563 !important;
+}
+
+/* =========================================
+   2. TYPOGRAPHY & CONSISTENT HEADINGS 
+   Accent 1 (Primary): #6C5CE7
+   Accent 2 (Secondary): #8E2DE2
+   ========================================= */
+.section-title {
+    color: #6C5CE7 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.card-title {
+    color: #8E2DE2 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.card-content, .card-text {
+    color: #4B5563 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+}
+
+/* =========================================
+   3. SIDEBAR (Solid Primary Purple)
+   ========================================= */
+[data-testid="stSidebar"] {
+    background-color: #6C5CE7 !important; 
+}
+
+/* Make only the labels and help text white so it doesn't affect inputs */
+[data-testid="stSidebar"] label p,
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #FFFFFF !important;
+}
+
+/* Input containers white */
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div,
+[data-testid="stSidebar"] .stNumberInput div[data-baseweb="input"] > div,
+[data-testid="stSidebar"] .stTextArea textarea {
+    background-color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 6px !important;
+}
+
+/* The actual text typed or selected INSIDE the inputs must be forced dark */
+[data-testid="stSidebar"] input, 
+[data-testid="stSidebar"] textarea, 
+[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #333333 !important; 
+}
+
+/* =========================================
+   4. BUTTONS
+   ========================================= */
+div[data-testid="stButton"] button {
+    background: linear-gradient(135deg, #6C5CE7 0%, #8E2DE2 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2) !important;
+}
+
+/* =========================================
+   5. BANNERS
+   ========================================= */
+.main-banner {
+    background: linear-gradient(90deg, #6C5CE7 0%, #8E2DE2 100%) !important;
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Force EVERYTHING inside the purple banners to be white, especially Streamlit's default h2/h3 tags */
+.main-banner, .main-banner *, .main-banner h1, .main-banner h2, .main-banner h3, .main-banner p, .main-banner span {
+    color: #FFFFFF !important;
+}
+
+.banner-title { 
+    margin: 0 !important; 
+    font-size: 1.6rem !important; 
+    font-weight: 700 !important; 
+    color: #FFFFFF !important;
+}
+.banner-sub { 
+    margin: 8px 0 0 0 !important; 
+    font-size: 1rem !important; 
+    opacity: 0.9 !important; 
+    color: #FFFFFF !important;
+}
+
+/* =========================================
+   6. CARDS
+   ========================================= */
+.white-card {
+    background-color: #FFFFFF !important;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border: 1px solid #E2E8F0;
+    height: 100%;
+}
+
+.card-metric {
+    background-color: #FFFFFF !important;
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #E2E8F0;
+    height: 100%;
+}
+.metric-value { 
+    font-size: 24px !important; 
+    font-weight: 700 !important; 
+    color: #1E293B !important; 
+    margin: 0 !important; 
+    padding-bottom: 8px !important;
+}
+.metric-label { 
+    font-size: 14px !important; 
+    color: #6C5CE7 !important; 
+    margin: 0 !important; 
+    font-weight: 600 !important;
+}
+.metric-subtext {
+    font-size: 11px !important; 
+    color: #94A3B8 !important; 
+    margin: 0 !important;
+}
+
+.card-advice {
+    background-color: #FFFFFF !important;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #E2E8F0;
+    margin-bottom: 1.5rem;
+    height: 100%;
+    text-align: left;
+}
+
+/* =========================================
+   7. CHAT BUBBLES
+   ========================================= */
+.user-message { 
+    background-color: #6C5CE7 !important; 
+    color: white !important; 
+    padding: 12px 18px; 
+    border-radius: 18px 18px 0 18px; 
+    margin-bottom: 12px; 
+    text-align: right; 
+    width: fit-content; 
+    margin-left: auto; 
+}
+.bot-message { 
+    background-color: #FFFFFF !important; 
+    color: #4B5563 !important; 
+    padding: 12px 18px; 
+    border-radius: 18px 18px 18px 0; 
+    margin-bottom: 18px; 
+    width: fit-content; 
+    border: 1px solid #E2E8F0;
+}
+
